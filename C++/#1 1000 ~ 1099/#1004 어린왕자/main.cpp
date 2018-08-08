@@ -25,7 +25,10 @@ int main() {
 			dist_with_start = distance(x1, y1, cx, cy);
 			dist_with_end = distance(x2, y2, cx, cy);
 
-			if (dist_with_start <= r || dist_with_end <= r) {
+			if (dist_with_start <= r && dist_with_end <= r) {
+				// 시작점과 도착점이 하나의 원 안에 있을 때
+			}
+			else if (dist_with_start <= r || dist_with_end <= r) {
 				// 시작점이나 도착점이 하나의 원 안에 있을 때
 				cnt++;
 			}
